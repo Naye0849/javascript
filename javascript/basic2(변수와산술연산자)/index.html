@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //변수: 데이터를 저장하는 공간
+        /* var 철수 = 10;
+        var 영희 = "javaScript"
+        var 명수 = true; */
+
+        var 철수 = 10,
+            영희 = "javaScript",
+            명수 = true;
+        
+        var 텍스트1="자바스크립트";
+        var 텍스트2="기초";
+        document.write(텍스트1+텍스트2) // +가 연결 연산자 역할
+
+        var 민수 ="2";
+        var 민숙 = 4;
+        var 말숙 = 3;
+        document.write("<br>")
+        document.write(민수+민숙) //24 -> "2"가 문자처리 됌 = "24"(문자)
+        document.write("<br>")
+        document.write(민숙+민수) //42 순서만 바뀜
+        document.write("<br>")
+        document.write(민숙+말숙+민수) //72 숫자인 민숙(4)+말숙(3)=7 +"2" -> 문자인 "72"
+        document.write("<br>")
+        document.write(민수+민숙+말숙) //243 문자인 민수 "2"를 먼저 읽었기 때문에 나머지 민숙과 말숙도 문자가 됌
+        document.write("<br>")
+        document.write(민수-민숙 + "<br>") //-2 '-'를 만나면 문자처리를 해도 숫자로 바뀜 / 문자화숫자는 +를 제외한 다른 연산자에서는 숫자로 변환
+        document.write(민수-민숙 + "<br>")//-2
+        document.write(민수*민숙 + "<br>")//8
+        document.write(민수/민숙 + "<br>")//2 나누기 (몫)
+
+        var 일동 = 5;
+        var 이동 = 2;
+        document.write(일동 % 이동 + "<br>")//1 나누기 (나머지)
+
+        var 후치 = 3;
+        후치++;
+        document.write(후치 + "<br>")//4 ->다음명령문으로 넘어갈 때 1이 더해짐 / 후치=후치+1
+
+        var 전치 = 3;
+        ++전치;
+        document.write(전치 + "<br>")//4 -> 들어올 때 부터 1이 더해져있음
+
+        var hong = 4;
+        hong--;
+        document.write(hong + "<br>")//3 -> 다음명령문으로 넘어갈 때 1이 빠짐
+
+        var hong = 4;
+        --hong;
+        document.write(hong + "<br>")//3 -> 들어올 때 부터 1이 빠짐
+
+        var 오동=5;
+        오동=오동+1;
+        document.write(오동) //6 <+=, -=, *=, /=, %=, **=> 결합순서 우->좌
+    </script>
+    
+</body>
+</html>

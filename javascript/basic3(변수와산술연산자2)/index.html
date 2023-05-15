@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var 민숙 =5
+        민숙++; //하나 더하기 
+        document.write(민숙 + '<br>')//6
+        
+        민숙=민숙+2;
+        document.write(민숙 + '<br>')//8
+
+        민숙 += 4; // -> 민숙 = 민숙 + 4;
+        document.write(민숙 + '<br>')//12
+
+        var 철수 = 5;
+        철수 = 철수 + 4;
+        document.write(철수 + '<br>')//9 우측에 계산된게 좌측으로 옴
+
+        var 철민 = 7;
+        철민 += 3; //철민 = 철민 + 3 을 다시 철민이한테 넣는다
+        document.write(철민 + '<br>')//10 
+
+        var 철식 = 9;
+        철식 += 9;
+        document.write(철식 + '<br>')
+
+        var 일동 = 9;
+        일동 -= 3; // 일동 = 일동(9) - 3
+        document.write(일동 + '<br>') //6
+
+        var 이동 = 8; 
+        이동--; // 1빼기
+        document.write(이동 + '<br>') //7
+    </script>
+ 
+    <script>
+        //변수 만들 때 사용하는 태그
+        //<var , let , const> var는 좀 옛날 태그임 요즘은 let 과 const 로 옮겨가는 추세
+
+            var 삼동 = 3;
+            document.write(삼동 + '<br>') // 3
+            삼동 = 4;
+            document.write(삼동 + '<br>') // 4
+            var 삼동 = 30;
+            document.write(삼동 + '<br>') //30
+            //똑같은 애를 만들어도 아무런 문제가 없음
+
+            let 사동 = 5;
+            // let 사동 = 6; <똑같은 let의 이름을 만들면 오류가 뜸->사동이가 이미 정의 되어있음>
+            사동 = 25; //그릇 안에 다른 값을 넣는 건 괜찮음 기존에 있던 숫자 + 새로운 숫자
+
+            let 육동;//그릇을 만들고 값을 안 줘도 괜찮음
+            //const 오동; 그릇을 만들고 값을 안주면 난리남 변수를 선언하자마자 값을 할당해야함
+            // -> 그래서 const는 바로 숫자를 넣어야해서 절대 변하지 않는 값을 넣음 (상수)
+            const 오동 = 3.14;
+            // 오동 = 7; 상수 이외에 다른 값을 할당할 수 없음 콘솔에서 오류가 남
+            document.write(오동 + '<br>') 
+            
+            /* *const(const상수) 키워드로 선언하는 변수는 데이터를 변경할 수 없어서 변수라고 부르지 않고 상수(변하지 않는 값)이라고 부른다.
+            var,let은 변수 선언 ,const 상수 선언 */
+
+
+
+            document.write(콜라)
+            var 콜라 = 30;
+
+            let 사이다 = 50;
+            document.write(사이다)
+
+            const 환타 = 60;
+            document.write(환타)
+    </script>
+
+    
+    
+</body>
+</html>

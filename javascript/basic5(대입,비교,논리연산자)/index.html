@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //대입연산자
+        let 철수 = 10;
+        let 영희 = 3;
+    
+        철수 += 5; //철수=철수+5
+        console.log(철수)
+
+        영희 -= 2; // 영희=영희-2;
+        console.log(영희)
+
+        let 수영 = 20;
+        수영 *=2; //수영 = 수영 *2;
+        console.log(수영)
+
+        let 민수 = 9;
+        민수 /= 2; // 민수 = 민수 /2 -> 몫
+        console.log(민수)
+
+        let 숙희 = 10;
+        숙희 **= 2//숙희 = 숙희의 2승
+        console.log(숙희)
+    </script>
+
+    <script>
+        //비교연산자
+        let 구일 = 9;
+        let 팔일 = 8;
+        console.log(구일==팔일)//false 구일이랑 팔일이가 같아? 아니 달라 (false)
+        
+        console.log(구일!=팔일)//true 구일이랑 팔일이가 달라? 응 달라 (true)
+        
+        console.log(구일<팔일)//false 구일이가 팔일이보다 작아? 아니 (false)
+        
+        console.log(구일>팔일)//true 구일이가 팔일이보다 커? 응 (true)
+
+        console.log(구일<=팔일)//false 구일이가 팔일이보다 작거나 똑같아? 아니 (false)
+
+        console.log(구일>=팔일)//true 구일이가 팔일이보다 크거나 똑같아? 응 (true)
+
+        let 사일 = 4;
+        let 네일 = "4";
+
+        console.log(사일 == 네일)//true 사일이랑 네일이가 같아? -> 응 같아 (true)
+        console.log(사일 != 네일)//false 사일이랑 네일이가 다른가? -> 응 달라 (true) / 아니 우리 안 다른데?? (false)
+        console.log(사일 === 네일)//false 사일이랑 네일이가 진짜진짜로(자료형구분) 같아? / 아니 다른 거 같아..(false)
+        //=== 자료형까지 구별한다 -> 문자인지 숫자인지 구별할 수 있음
+        console.log(사일 !== 네일)//true 사일이랑 네일이가 진짜진짜로(자료형구분) 달라? / 응 달라(true)
+
+
+        //논리연산자
+        /* &&(AND연산자): A와 B가 모두 true이면 true
+        true && true ==> true // 우리는 트루와 트루야! -> 트루
+        true && false ==> false // 우리는 트루와 폴스야! t:넌 트루가 아니잖아! -> 폴스
+        false && true ==> false */ //우리는 폴스와 트루야! t: 넌 트루도 아닌데 앞에 있잖아! 에이 초장부터 글러먹었네 -> 폴스
+
+        true && console.log("논리연산자 and") //실행
+        false && console.log("false논리연산자 and") //실행불가
+        //a||b :or연산자 둘 중 하나라도 true면 true이다
+        //둘 중 하나라도 false이면 false이다
+
+        let aa = 10;
+        let bb = 20;
+        let cc = 30;
+
+        console.log (aa<bb && bb<cc)//true
+        console.log (aa>bb && bb<cc)//false
+        console.log (aa<bb || bb<cc)//true
+        console.log (aa>bb || bb<cc)//false
+    </script>
+
+</body>
+</html>
