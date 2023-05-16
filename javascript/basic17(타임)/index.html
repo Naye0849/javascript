@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let today = new Date();
+        console.log(today)
+        //toDateString() 미국식 시간 표현 (요일,월,일,년) 시간은 안나옴
+        //Tue May 16 2023- toDateString()
+        document.write(today.toDateString())
+        document.write('- toDateString()<br>')
+
+        //toLocaleDateString() date 객체의 날짜 부분을 지역의 언어에 맞는 문자열 표현으로 반환한다. (한국은 한국식)
+        //2023. 5. 16.- toLocaleDateString()
+        document.write(today.toLocaleDateString());
+        document.write('- toLocaleDateString()<br>');
+
+        //toLocaleTimeString() date 객체의 시간 부분을 지역의 언어에 맞는 문자열 표현으로 반환한다.
+        //오후 4:10:48- toLocaleTimeString()
+        document.write(today.toLocaleTimeString());
+        document.write('- toLocaleTimeString()<br>');
+
+        //toLocaleString() date 객체의 시간과 날짜 부분을 지역의 언어에 맞는 문자열 표현을 반환한다.
+        //2023. 5. 16. 오후 4:10:48- toLocaleString()
+        document.write(today.toLocaleString());
+        document.write('- toLocaleString()<br>');
+
+        //toTimeString() date 객체의 시간 부분을 그리니치 표준시로 표현한다
+        document.write(today.toTimeString());
+        document.write('- toTimeString()<br>');
+
+        
+        //UTC 시간대
+        //협정 세계시(UTC)는 전 세계 시간 연구소가 보유하는 시간의 척도
+
+        //toUTCString() UTC 시간대를 사용하여 날짜를 문자열로 반환한다
+        document.write(today.toUTCString())
+        document.write('- toUTCString()<br>')
+    </script>
+</body>
+</html>

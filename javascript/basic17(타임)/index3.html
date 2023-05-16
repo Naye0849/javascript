@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'DOSPilgiMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/DOSPilgiMedium.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .clock {
+            font-family:  'DOSPilgiMedium';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 310px;
+            height: 300px;
+            padding-top: 75px;
+            text-align: center;
+        }
+
+        .clock span {
+            color: #000;
+            font-weight: bold;
+            opacity: 0.7;
+        }
+
+        .clock .time_box {}
+
+        .clock .time_box .txt_lg {
+            font-size: 75px;
+        }
+
+        .clock .date_box {
+            font-size: 20px;
+        }
+
+        #day {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .mark {
+            vertical-align: 11px;
+            font-size: 23px;
+        }
+
+        .clock .date_box span {}
+    </style>
+</head>
+
+<body>
+    <!--  font-family: 'NeoDunggeunmoPro-Regular'; -->
+    <div class="clock">
+        <div class="time_box">
+            <span class="txt_lg" id="hours"></span>
+            <span class="mark">:</span>
+            <span class="txt_lg" id="min"></span>
+            <span class="mark">:</span>
+            <span class="txt_lg" id="sec"></span>
+        </div>
+        <div class="date_box">
+            <span id="month"></span>
+            <span class="point">.</span>
+            <span id="date"></span>
+            <span class="point">.</span>
+            <span id="year"></span>
+            <span id="day"></span>
+        </div>
+    </div>
+    <script>
+        setInterval(function () {
+            let today = new Date();
+
+            let dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+            let dayListEn = ['SUN', 'MON', 'TUES', 'WED', 'THUR', 'FRI', 'SAT']
+
+            let hh = addZero(today.getHours()); //시
+            let mm = addZero(today.getMinutes()); //분
+            let ss = addZero(today.getSeconds()); //초
+            let YY = today.getFullYear(); //년
+            let MM = today.getMonth() + 1; //달
+            let DD = today.getDate();
+            let dd = dayListEn[today.getDay()];
+
+            document.querySelector("#hours").innerHTML = hh;
+            document.querySelector("#min").innerHTML = mm;
+            document.querySelector("#sec").innerHTML = ss;
+            document.querySelector("#year").innerHTML = YY;
+            document.querySelector("#month").innerHTML = MM;
+            document.querySelector("#date").innerHTML = DD;
+            document.querySelector("#day").innerHTML = dd;
+            console.log(ss)
+
+            function addZero(num) {
+                return (num < 10 ? "0" + num : '' + num)
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>
